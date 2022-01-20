@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+p {
+    font-size: 16px;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+/********** NAVBAR*********/
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2rem 0;
+    width: 100%;
+}
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.nav-container h2 {
+    margin-right: 2rem;
+    font-size: 26px;
+    font-weight: 700;
+}
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+.nav-menu li {
+    margin-left: 2rem;
+}
+.nav-menu li a {
+    color: hsl(219, 9%, 45%);
+    padding: 45px 0;
+}
+.nav-menu a:hover {
+    border-bottom: 3px solid hsl(26, 100%, 55%);
+}
+.shop-menu {
+    display: flex;
+    align-items: center;
+}
+.icon {
+    position: relative;
+    margin-right: 2rem;
+    font-size: 20px;
+    color: hsl(219, 9%, 45%);
+    cursor: pointer;
+}
+.shop-menu img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.shop-menu img:hover {
+    border: 2px solid hsl(26, 100%, 55%);
+    border-radius: 50%;
+}
+.line {
+    width: 75%;
+    height: 1px;
+    background-color:  hsl(210, 6%, 93%);
+    margin: 0 auto;
+}
+.toggle {
+    display: none;
+}
+.close {
+    display: none;
+}
+.cart-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cart {
+    position: absolute;
+    width: 300px;
+    top: 3rem;
+    padding: 1rem 1rem;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 0.25rem;
+    z-index: 1;
+}
+.cart h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.cart-info {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.cart-empty {
+    text-align: center;
+    margin: 3rem 0;
+}
+.cart-empty {
+    font-size: 13px;
+    color: hsl(219, 9%, 45%);
+}
+.cart-info img {
+    border-radius: 0.25rem;
+    margin-right: 0.5rem;
+}
+.cart-info p {
+    font-size: 13px;
+    color: hsl(219, 9%, 45%);
+    margin-right: 0.5rem;
+}
+.cart-info p span {
+    color: black;
+    font-weight: 700;
+    margin-left: 0.2rem;
+}
+.cart-value {
+    position: absolute;
+    top: -5px;
+    left: 12px;
+    width: 18px;
+    height: 13px;
+    background-color: hsl(26, 100%, 55%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 0.30rem;
+}
+.btn-trash {
+    background-color: transparent;
+    border-color: transparent;
+    color: hsl(219, 9%, 45%);
+    font-size: 14px;
+    cursor: pointer;
+}
+.btn-checkout {
+    width: 100%;
+    padding: 0.7rem 0;
+    border-color: transparent;
+    background-color: hsl(26, 100%, 55%);
+    color: #fff;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+}
+@media screen and (max-width: 900px) {
+    .navbar {
+        height: 2vh;
+    }
+    .toggle {
+        display: block;
+        font-size: 21px;
+        margin-right: 1rem;
+        cursor: pointer;
+        color: hsl(219, 9%, 45%);
+    }
+    .close {
+        position: absolute;
+        top: 1rem;
+        left: 2rem;
+        display: block;
+        cursor: pointer;
+        color: hsl(219, 9%, 45%);
+        font-weight: 700;
+        font-size: 20px;
+    }
+    .nav-menu {
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-menu li {
+        height: 40px;
+    }
+    .nav-menu li a {
+        color: black;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .nav-menu a:hover {
+        border-bottom: none;
+    }
+    .sidebar {
+        position: fixed;
+        width: 100%;
+        min-height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        transition: all 0.3s linear;
+        transform: translate(-100%);
+        z-index: 1;
+    }
+    .show-sidebar {
+        transform: translate(0);
+    }
+    .shop-menu img {
+        width: 35px;
+        height: 35px;
+        object-fit: cover;
+    }
+}
+/******** Home ********/
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem 0;
+}
+.img-container {
+    width: 30%;
+    position: relative;
+}
+.image {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+.gallery {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem;
+}
+.gallery img {
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.active {
+    border: 3px solid hsl(26, 100%, 55%);
+}
+.info {
+    width: 30%;
+    margin-left: 8rem;
+}
+.info h4 {
+    font-size: 10px;
+    letter-spacing: 0.1rem;
+    color: hsl(26, 100%, 55%);
+    margin-bottom: 1rem;
+}
+.info h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.info p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: hsl(219, 9%, 45%);
+    margin-bottom: 1rem;
+}
+.product-price {
+    display: flex;
+    align-items: center;
+}
+.price {
+    font-size: 25px;
+    font-weight: 700;
+    margin-right: 2rem;
+}
+.solde {
+    color: hsl(26, 100%, 55%);
+    background-color: hsl(25, 100%, 94%);
+    border-radius: 0.25rem;
+    padding: 0.15rem 0.5rem;
+    font-weight: 700;
+}
+.btn-container {
+    display: flex;
+    align-items: center;
+}
+.cart-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 140px;
+    background-color: hsl(223, 64%, 98%);
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.25rem;
+}
+.cart-btn button {
+    background-color: transparent;
+    border-color: transparent;
+    color: hsl(26, 100%, 55%);
+    cursor: pointer;
+}
+.btn {
+    display: flex;
+    align-items: center;
+    padding: 0.7rem 4rem;
+    margin-left: 2rem;
+    border-color: transparent;
+    background-color: hsl(26, 100%, 55%);
+    color: #fff;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    box-shadow: 5px 15px 20px hsl(25, 100%, 94%);
+    cursor: pointer;
+}
+.btn:disabled {
+    cursor: not-allowed;
+}
+.btn-icon {
+    margin-right: 1rem;
+}
+.prev,
+.next {
+    display: none;
+}
+
+
+@media screen and (max-width: 900px) {
+    section {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .img-container {
+        width: 100%;
+    }
+    .image {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0;
+    }
+    .gallery {
+        display: none;
+    }
+    .info {
+        width: 350px;
+        margin: 1rem 0;
+    }
+    .info h4 {
+        font-size: 15px;
+    }
+    .info p {
+        font-size: 18px;
+    }
+    .cart-btn {
+        width: 100%;
+    }
+    .btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+        padding: 1.2rem 0;
+        margin: 1rem 0;
+    }
+    .btn-container {
+        flex-direction: column;
+    }
+    .prev,
+    .next {
+        position: absolute;
+        top: 50%;
+        display: grid;
+        place-items: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        border-color: transparent;
+        cursor: pointer;
+    }
+    .prev:hover, 
+    .next :hover {
+        color: hsl(26, 100%, 55%);
+    }
+    .prev {
+        left: 1rem;
+    }
+    .next {
+        right: 1rem;
+    }
+    .activeSlide {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .lastSlide {
+        transform: translateX(-100%);
+    }
+    .nextSlide {
+        transform: translateX(100%);
+    }
+    .gallery {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: all 0.3s linear;
+    }
+}
